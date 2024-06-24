@@ -1,0 +1,25 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+}
+
+.button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.text {
+  font-size: 1.7rem;
+  font-weight: 500;
+}

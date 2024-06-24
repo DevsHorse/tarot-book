@@ -1,0 +1,38 @@
+.root {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  align-items: center;
+  gap: 80px;
+}
+
+.interactions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.resultAnswerActionButton {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+@media screen and (max-width: 992px) {
+  .root {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .root {
+    flex-grow: unset;
+    align-items: flex-start;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .resultAnswerActionButton {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+}

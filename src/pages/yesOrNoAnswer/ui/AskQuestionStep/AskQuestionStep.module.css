@@ -1,0 +1,29 @@
+.root {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+}
+
+.interactions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+@media screen and (max-width: 992px) {
+  .root {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .root {
+    flex-grow: unset;
+    align-items: flex-start;
+    gap: 15px;
+    padding-bottom: 90px;
+  }
+}

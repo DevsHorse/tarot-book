@@ -1,0 +1,18 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.breadcrumbItem {
+  font-size: 1.4rem;
+  color: var(--color-text-light);
+  user-select: none;
+  opacity: 0.4;
+  cursor: default;
+}
+
+.root > a > .breadcrumbItem {
+  opacity: 1;
+  cursor: pointer;
+}

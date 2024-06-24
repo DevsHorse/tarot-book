@@ -1,0 +1,25 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .root {
+    gap: 16px;
+  }
+  .list {
+    gap: 8px;
+  }
+}

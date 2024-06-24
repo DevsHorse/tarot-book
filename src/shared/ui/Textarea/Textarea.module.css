@@ -1,0 +1,36 @@
+.root {
+  position: relative;
+}
+
+.root textarea {
+  resize: none;
+  width: 100%;
+  padding: 20px 30px;
+  color: var(--color-text-light);
+  background: var(--color-input-background);
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+.root textarea:focus-visible {
+  outline: solid;
+  outline-color: rgba(255, 255, 255, 0.5);
+}
+
+.root textarea::placeholder {
+  color: var(--color-input-placeholder);
+}
+
+.root textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.counter {
+  position: absolute;
+  right: 14px;
+  bottom: 16px;
+  font-size: 11px;
+  z-index: 2;
+  color: var(--color-input-placeholder);
+}

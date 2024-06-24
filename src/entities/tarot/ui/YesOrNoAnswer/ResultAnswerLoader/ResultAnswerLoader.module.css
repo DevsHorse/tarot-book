@@ -1,0 +1,179 @@
+:root {
+  --result-answer-loader-container-width: 380px;
+  --result-answer-loader-block-height: 22px;
+  --result-answer-loader-animation-duration: 1s;
+  --result-answer-loader-animation-end: 0.5;
+}
+
+@media screen and (max-width: 768px) {
+  .blockLoader {
+    border-radius: 5px;
+  }
+  :root {
+    --result-answer-loader-container-width: 270px;
+    --result-answer-loader-block-height: 16px;
+  }
+}
+
+.root {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  width: var(--result-answer-loader-container-width);
+  min-width: var(--result-answer-loader-container-width);
+  z-index: 0;
+}
+
+.blockLoader {
+  height: var(--result-answer-loader-block-height);
+  border-radius: 6px;
+}
+
+.blockLoader:after {
+  animation-duration: var(--result-answer-loader-animation-duration);
+}
+
+.blockLoader:nth-child(1) {
+  width: 18.42%;
+}
+
+.blockLoader:nth-child(2) {
+  width: 10.53%;
+}
+
+.blockLoader:nth-child(3) {
+  width: 21.05%;
+}
+
+.blockLoader:nth-child(4) {
+  width: 31.58%;
+}
+
+.blockLoader:nth-child(5) {
+  width: 13.16%;
+}
+
+.blockLoader:nth-child(6) {
+  width: 26.32%;
+}
+
+.blockLoader:nth-child(7) {
+  width: 21.05%;
+}
+
+.blockLoader:nth-child(8) {
+  width: 31.58%;
+}
+
+.blockLoader:nth-child(9) {
+  width: 28.95%;
+}
+
+.blockLoader:nth-child(10) {
+  width: 13.16%;
+}
+
+.blockLoader:nth-child(11) {
+  width: 28.95%;
+}
+
+.blockLoader:nth-child(12) {
+  width: 13.16%;
+}
+
+.blockLoader:nth-child(1):after {
+  /* base: 0 = entry */
+  animation-delay: 0;
+}
+
+.blockLoader:nth-child(2):after {
+  /* 
+			* gap-percent: gap / containerWidth
+			* 0.2 = block-1 + gap-percent
+			*/
+  animation-delay: calc(
+    var(--result-answer-loader-animation-duration) *
+      var(--result-answer-loader-animation-end) * 0.2
+  );
+}
+
+.blockLoader:nth-child(3):after {
+  /* 0.32 = block-1 + block-2 + (gap-percent * 2) */
+  animation-delay: calc(
+    var(--result-answer-loader-animation-duration) *
+      var(--result-answer-loader-animation-end) * 0.32
+  );
+}
+
+.blockLoader:nth-child(4):after {
+  /* 0.55 = block-1 + block-2 + block-3 + (gap-percent * 3) */
+  animation-delay: calc(
+    var(--result-answer-loader-animation-duration) *
+      var(--result-answer-loader-animation-end) * 0.55
+  );
+}
+
+.blockLoader:nth-child(5):after {
+  /* base: 0.12 = (block-height + gap - 4?) / 2 */
+  animation-delay: calc(
+    var(--result-answer-loader-animation-duration) *
+      var(--result-answer-loader-animation-end) * 0.12
+  );
+}
+
+.blockLoader:nth-child(6):after {
+  /* 0.27 = base + block-5 + gap-percent */
+  animation-delay: calc(
+    var(--result-answer-loader-animation-duration) *
+      var(--result-answer-loader-animation-end) * 0.27
+  );
+}
+
+.blockLoader:nth-child(7):after {
+  /* 0.55 = base + block-5 + block-6 + (gap-percent * 2) */
+  animation-delay: calc(
+    var(--result-answer-loader-animation-duration) *
+      var(--result-answer-loader-animation-end) * 0.55
+  );
+}
+
+.blockLoader:nth-child(8):after {
+  /* 0.77 = base + block-5 + block-6 + block-7 + (gap-percent * 3) */
+  animation-delay: calc(
+    var(--result-answer-loader-animation-duration) *
+      var(--result-answer-loader-animation-end) * 0.77
+  );
+}
+
+.blockLoader:nth-child(9):after {
+  /* base: 0.23 = ((block-height * 2) + (gap * 2) - 4?) / 2 */
+  animation-delay: calc(
+    var(--result-answer-loader-animation-duration) *
+      var(--result-answer-loader-animation-end) * 0.23
+  );
+}
+
+.blockLoader:nth-child(10):after {
+  /* 0.54 = base + block-9 + gap-percent */
+  animation-delay: calc(
+    var(--result-answer-loader-animation-duration) *
+      var(--result-answer-loader-animation-end) * 0.54
+  );
+}
+
+.blockLoader:nth-child(11):after {
+  /* 0.68 = base + block-9 + block-10 + (gap-percent * 2) */
+  animation-delay: calc(
+    var(--result-answer-loader-animation-duration) *
+      var(--result-answer-loader-animation-end) * 0.68
+  );
+}
+
+.blockLoader:nth-child(12):after {
+  /* 0.99 = base + block-9 + block-10 + block-11 + (gap-percent * 3) */
+  animation-delay: calc(
+    var(--result-answer-loader-animation-duration) *
+      var(--result-answer-loader-animation-end) * 0.99
+  );
+}

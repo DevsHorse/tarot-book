@@ -1,0 +1,23 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+.goBackButton {
+  padding: 23px 0 3px 5px;
+}

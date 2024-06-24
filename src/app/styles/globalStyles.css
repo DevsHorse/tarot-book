@@ -1,0 +1,107 @@
+@import 'normalize.css/normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,700&display=swap');
+
+:root {
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, San Francisco,
+    Helvetica Neue, Helvetica, Ubuntu, Noto, Segoe UI, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --font-family-main: Poppins;
+
+  --container-width: 1200px;
+  --font-size: 1.8rem;
+
+  --color-black: #1e1821;
+  --color-white: #fff;
+  --color-gray-f5: #f5f5f8;
+  --color-gray-fa: #fafafa;
+  --color-purple-f0: #f0e7f3;
+  --color-purple-ec: #ecdfef;
+  --color-purple-d3: #d3bdd9;
+  --color-purple-ba: #ba94cf;
+  --color-purple-5a: #5a3b57;
+  --color-purple-52: #522a5f;
+  --color-purple-48: #482654;
+  --color-purple-29: #290137;
+  --color-yellow: #ffca64;
+  --color-pink: #fc5f7e;
+
+  --color-text-dark: var(--color-black);
+  --color-text-light: var(--color-white);
+  --color-modal-background: var(--color-gray-fa);
+  --color-input-background: var(--color-purple-5a);
+  --color-input-placeholder: var(--color-purple-d3);
+  --color-app-background: var(--color-purple-29);
+  --color-accent: var(--color-pink);
+  --color-accent-2: var(--color-yellow);
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --font-size: 1.6rem;
+  }
+}
+
+/* Global styles */
+
+body {
+  margin: 0;
+  font-size: var(--font-size);
+  color: var(--color-text-light);
+  line-height: 1.2;
+  background-color: var(--color-app-background);
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.defaultLinkColors:link {
+  color: #0000ee;
+}
+.defaultLinkColors:visited {
+  color: #551a8b;
+}
+.defaultLinkColors:link:active,
+.defaultLinkColors:visited:active {
+  color: #ff0000;
+}
+
+@media screen and (min-width: 769px) {
+  .mobile {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobile {
+    display: inherit;
+  }
+
+  .desktop {
+    display: none !important;
+  }
+
+  body {
+    background-image: url('../../shared/assets/mobile-app-bg.png');
+    background-size: cover;
+    background-blend-mode: difference;
+    background-position-y: top;
+  }
+}

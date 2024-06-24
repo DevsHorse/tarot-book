@@ -1,0 +1,32 @@
+.root {
+  position: sticky;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  height: 90px;
+  background-color: var(--color-app-background);
+  z-index: 100;
+}
+
+.backdrop {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .root {
+    align-items: flex-start;
+    padding: 10px 0;
+    height: fit-content;
+    background-color: transparent;
+    z-index: 101;
+  }
+  .backdrop {
+    display: block;
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(5px);
+    z-index: -1;
+  }
+}

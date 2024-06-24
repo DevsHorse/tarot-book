@@ -1,0 +1,130 @@
+div.modal {
+  width: fit-content;
+  height: fit-content;
+  min-width: 480px;
+  max-width: 650px;
+  outline: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.title {
+  color: var(--color-text-dark);
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.closeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--color-white);
+  cursor: pointer;
+  user-select: none;
+}
+.closeButton:hover svg {
+  opacity: 0.6;
+}
+
+.closeButton svg {
+  width: 20px;
+  height: 20px;
+}
+.closeButton svg path {
+  fill: var(--color-black);
+}
+
+.seeAllButton {
+  font-size: 1.6rem;
+}
+
+.psychicsList {
+  padding-top: 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  column-gap: 20px;
+  overflow-x: scroll;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 27px;
+}
+
+.actions .nowButton {
+  text-transform: capitalize;
+  width: 320px;
+}
+
+.actions .bookButton {
+  text-transform: capitalize;
+  background-color: transparent;
+  color: var(--color-text-dark);
+  font-size: 1.4rem;
+  padding: 0;
+  height: fit-content;
+}
+
+@media screen and (max-width: 768px) {
+  div.modal {
+    transform: none;
+    bottom: 0;
+    left: 0;
+    top: auto;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    max-width: 100%;
+    min-width: auto;
+  }
+
+  .title {
+    font-size: 1.6rem;
+    text-transform: none;
+  }
+
+  .psychicsList {
+    padding: 0;
+  }
+
+  .actions {
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+
+  .actions .nowButton {
+    font-weight: 600;
+    height: 48px;
+    font-size: 1.4rem;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .actions .bookButton {
+    height: 48px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    background: var(--color-purple-ec);
+    padding: 5px 34px;
+    width: 100%;
+    max-width: 500px;
+  }
+}

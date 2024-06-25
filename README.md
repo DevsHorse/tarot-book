@@ -1,7 +1,5 @@
 # Tarot book
 
-[Demo link](https://tarot-book-mocha.vercel.app/ 'Demo link')
-
 ## Installation
 
 Install dependencies:
